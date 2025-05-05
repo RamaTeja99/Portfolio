@@ -25,7 +25,7 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    alert('Message sent! (This is a demo)');
+    alert('Message sent!');
   };
 
   const fadeInUp = {
@@ -138,7 +138,8 @@ const ContactSection = () => {
             variants={fadeInUp}
             transition={{ delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="bg-gray-900 p-8 rounded-2xl shadow-lg">
+            <form onSubmit={handleSubmit} name="contact" method="POST"
+  data-netlify="true" className="bg-gray-900 p-8 rounded-2xl shadow-lg">
               <div className="mb-6">
                 <label htmlFor="name" className="block text-gray-400 font-medium mb-2">Name</label>
                 <input
