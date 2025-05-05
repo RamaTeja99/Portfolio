@@ -11,15 +11,17 @@ const SkillsSection = () => {
   const programmingSkills = [
     { name: 'Python', level: 90 },
     { name: 'Java', level: 85 },
-    { name: 'C', level: 75 },
     { name: 'JavaScript', level: 85 },
-    { name: 'React', level: 80 }
+    { name: 'React', level: 80 },
+    { name: 'C', level: 75 },
+    { name: 'MySQL', level: 85 },
+    { name: 'MongoDB', level: 80 },
   ];
   
   const databaseSkills = [
-    { name: 'MySQL', level: 85 },
-    { name: 'MongoDB', level: 80 },
-    { name: 'Spring Boot', level: 75 },
+    { name: 'Spring Boot', level: 85 },
+    { name: 'MERN',level:70 },
+    { name: 'Django',level:75},
   ];
   
   const coreSkills = [
@@ -81,7 +83,7 @@ const SkillsSection = () => {
                 <div key={skill.name} className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium text-gray-200">{skill.name}</span>
-                    <span className="text-sm text-tech-purple">{skill.level}%</span>
+                    {/* <span className="text-sm text-tech-purple">{skill.level}%</span> */}
                   </div>
                   <div className="h-2 w-full bg-gray-700 rounded-full overflow-hidden">
                     <motion.div
@@ -112,7 +114,7 @@ const SkillsSection = () => {
                 <div key={skill.name} className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium text-gray-200">{skill.name}</span>
-                    <span className="text-sm text-tech-purple">{skill.level}%</span>
+                    {/* <span className="text-sm text-tech-purple">{skill.level}%</span> */}
                   </div>
                   <div className="h-2 w-full bg-gray-700 rounded-full overflow-hidden">
                     <motion.div

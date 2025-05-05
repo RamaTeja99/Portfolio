@@ -11,7 +11,6 @@ import ScrollToTop from "../components/ScrollToTop";
 
 const Index = () => {
   return (
-    // Set dark background here globally for page
     <div className="min-h-screen bg-black text-gray-300">
       <Header />
       <HeroSection />

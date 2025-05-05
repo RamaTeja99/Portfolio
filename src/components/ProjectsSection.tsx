@@ -14,21 +14,24 @@ const ProjectsSection = () => {
       description: 'Designed to leverage advanced management tools for tracking and maintaining student extracurricular achievements. It enables institutions to add, update, and modify student records seamlessly.',
       tech: ['Spring Boot', 'Java', 'MySQL'],
       link: 'https://github.com/RamaTeja99/Student_Extracurricular_Achievements_Platform',
-      image: '/placeholder.svg' // Replace with actual image
+      deploylink:'https://seap.netlify.app/',
+      image: 'images/seap.png'
     },
     {
-      title: 'Ecommerce PSPCS',
-      description: 'The E-commerce Product Search and Price Comparison project utilizes an E-commerce API to offer users a comprehensive view of product options and prices from various online retailers.',
-      tech: ['Django', 'Python', 'APIs'],
-      link: 'https://github.com/RamaTeja99/EcommercePSPCS',
-      image: '/placeholder.svg' // Replace with actual image
+      title: 'CloudBasedVPN',
+      description: 'A cloud-based VPN platform using WireGuard, with dynamic config and QR code generation, built on a modern fullstack setup.',
+      tech: ['Spring Boot', 'Java', 'MySQL'],
+      link: 'https://github.com/RamaTeja99/CloudBasedVPN',
+      deploylink:'https://cloudbasedvpn.netlify.app/',
+      image: 'images/cloudvpn.png'
     },
     {
       title: 'E-Survey Web Application',
       description: 'The E-Survey Web Application is a Mern Stack Project and ESurvey is a user-friendly and efficient platform designed to create, distribute, and collect survey responses online.',
       tech: ['React', 'Node.js', 'MongoDB', 'Express'],
       link: 'https://github.com/RamaTeja99/E-Survey-Web-Application',
-      image: '/placeholder.svg' // Replace with actual image
+      deploylink:'https://e-survey-react.netlify.app/',
+      image: 'images/e-survey.png' 
     }
   ];
   
@@ -77,11 +80,13 @@ const ProjectsSection = () => {
               }}
             >
               <div className="h-48 overflow-hidden bg-gray-800">
+                <a href={project.deploylink} target="_blank" rel="noopener noreferrer">
                 <img 
                   src={project.image} 
                   alt={project.title} 
                   className="w-full h-full object-cover transition-all duration-500 hover:scale-110"
                 />
+                </a>
               </div>
               
               <div className="p-6 flex-1 flex flex-col">

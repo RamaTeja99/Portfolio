@@ -25,7 +25,6 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Would implement actual form submission here
     alert('Message sent! (This is a demo)');
   };
 
@@ -141,9 +140,7 @@ const ContactSection = () => {
           >
             <form onSubmit={handleSubmit} className="bg-gray-900 p-8 rounded-2xl shadow-lg">
               <div className="mb-6">
-                <label htmlFor="name" className="block text-gray-400 font-medium mb-2">
-                  Name
-                </label>
+                <label htmlFor="name" className="block text-gray-400 font-medium mb-2">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -155,11 +152,9 @@ const ContactSection = () => {
                   placeholder="Your Name"
                 />
               </div>
-              
+
               <div className="mb-6">
-                <label htmlFor="email" className="block text-gray-400 font-medium mb-2">
-                  Email
-                </label>
+                <label htmlFor="email" className="block text-gray-400 font-medium mb-2">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -171,11 +166,9 @@ const ContactSection = () => {
                   placeholder="your.email@example.com"
                 />
               </div>
-              
+
               <div className="mb-6">
-                <label htmlFor="message" className="block text-gray-400 font-medium mb-2">
-                  Message
-                </label>
+                <label htmlFor="message" className="block text-gray-400 font-medium mb-2">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -187,7 +180,7 @@ const ContactSection = () => {
                   placeholder="Your message here..."
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full py-3 px-6 bg-tech-purple text-white rounded-lg font-medium hover:bg-tech-dark-purple transition-colors"

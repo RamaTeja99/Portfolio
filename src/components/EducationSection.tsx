@@ -14,7 +14,7 @@ const EducationSection = () => {
       institution: 'Koneru Lakshmaiah Education Foundation',
       period: '08 2022 – 05 2026',
       location: 'Vijayawada, India',
-      achievement: 'CGPA: 9.58 (up to the 4th semester)'
+      achievement: 'CGPA: 9.62'
     },
     {
       degree: 'Intermediate',
@@ -53,11 +53,13 @@ const EducationSection = () => {
   const internships = [
     {
       title: 'Cyber Security with Kali Linux with IBM',
-      type: 'Virtual'
+      type: 'Virtual',
+      link:'https://www.credly.com/badges/bec76aa8-79d9-443e-b428-62165947ede7'
     },
     {
       title: 'Ethical Hacking Virtual Internship with EduSkills',
-      type: 'Virtual'
+      type: 'Virtual',
+      link: 'https://www.linkedin.com/posts/batchuvenkatadharmaramateja_ethical-hacking-virtual-internship-activity-7240221283072757760-XpTX'
     }
   ];
 
@@ -185,13 +187,16 @@ const EducationSection = () => {
               
               <div className="space-y-4">
                 {internships.map((internship, index) => (
-                  <motion.div
+                  <motion.a
                     key={internship.title}
-                    className="p-5 bg-gray-900 rounded-xl shadow-md"
+                    href={internship.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-5 bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-shadow"
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
                     variants={fadeInUp}
-                    transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                    transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                   >
                     <div className="flex items-start">
                       <div className="rounded-full bg-tech-blue/20 p-3 mr-4">
@@ -205,7 +210,7 @@ const EducationSection = () => {
                         <p className="text-gray-400">{internship.type}</p>
                       </div>
                     </div>
-                  </motion.div>
+                  </motion.a>
                 ))}
               </div>
             </div>

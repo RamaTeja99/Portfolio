@@ -30,7 +30,7 @@ const Header = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <a href="#home" className="text-2xl font-bold font-display text-tech-navy">
-            <span className="text-tech-purple">R</span>ama<span className="text-tech-blue">T</span>eja
+            <span className="text-tech-purple">Rama </span><span className="text-tech-blue">Teja</span>
           </a>
         </motion.div>
         

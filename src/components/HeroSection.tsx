@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden py-20 pt-28 bg-black text-gray-300">
-      {/* Animated background elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-tech-purple/30 blur-3xl"></div>
         <div className="absolute bottom-20 left-10 w-72 h-72 rounded-full bg-tech-blue/30 blur-3xl"></div>
@@ -73,34 +72,33 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="relative">
-            {/* Profile image with animated border */}
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-tech-blue relative z-10">
-              <div className="absolute inset-0 bg-gradient-to-r from-tech-purple to-tech-blue animate-spin-slow rounded-full"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-r from-tech-purple to-tech-blue animate-spin-slow rounded-full"></div> */}
               <div className="absolute inset-2 rounded-full overflow-hidden bg-black">
-                {/* Replace with actual image */}
-                <div className="w-full h-full bg-gray-800 flex items-center justify-center text-2xl font-bold text-gray-400">RT</div>
+                
+                <div className="w-full h-full bg-gray-800 flex items-center justify-center text-2xl font-bold text-gray-400"><img src="images/RamaTeja.jpg"></img></div>
               </div>
             </div>
             
             {/* Floating elements */}
             <motion.div 
               className="absolute -top-5 -right-5 p-3 rounded-lg glass-card flex items-center gap-2"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ x:50 ,y: -30, opacity: 1 }}
               transition={{ delay: 1.2 }}
             >
               <span className="w-3 h-3 rounded-full bg-green-500"></span>
               <span className="font-medium text-sm text-white">Available for Work</span>
             </motion.div>
             
-            <motion.div 
+            {/* <motion.div 
               className="absolute -bottom-5 -left-5 p-3 rounded-lg glass-card"
               initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              animate={{ y: 30, opacity: 1 }}
               transition={{ delay: 1.4 }}
             >
               <span className="font-medium text-sm text-white">CGPA: 9.58/10</span>
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
       </div>
