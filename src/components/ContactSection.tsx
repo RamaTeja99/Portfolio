@@ -140,6 +140,8 @@ const ContactSection = () => {
           >
             <form onSubmit={handleSubmit} name="contact" method="POST"
   data-netlify="true" className="bg-gray-900 p-8 rounded-2xl shadow-lg">
+            <input type="hidden" name="form-name" value="contact" />
+
               <div className="mb-6">
                 <label htmlFor="name" className="block text-gray-400 font-medium mb-2">Name</label>
                 <input
