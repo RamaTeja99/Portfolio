@@ -23,10 +23,18 @@ const ContactSection = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // You can also show a toast or reset form
+ const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const myForm = event.target as HTMLFormElement;
+    const formData = new FormData(myForm);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString()
+    })
+      .then(() => alert('Thank you for your submission!'))
+      .catch(error => alert(error));
   };
 
   const fadeInUp = {
