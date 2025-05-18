@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
@@ -8,24 +7,25 @@ const ContactSection = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
-  
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    alert('Message sent!');
   };
 
   const fadeInUp = {
@@ -44,19 +44,22 @@ const ContactSection = () => {
         >
           Get In <span className="text-tech-purple">Touch</span>
         </motion.h2>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left Side: Contact Info */}
           <motion.div
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             variants={fadeInUp}
           >
-            <h3 className="text-2xl font-bold font-display mb-4 text-white">Let's Connect</h3>
+            <h3 className="text-2xl font-bold font-display mb-4 text-white">
+              Let's Connect
+            </h3>
             <p className="text-gray-400 mb-8">
-              Feel free to reach out for collaborations, opportunities, or just a friendly chat.
+              Feel free to reach out for collaborations, opportunities, or just
+              a friendly chat.
             </p>
-            
-            <div className="space-y-4">
+                        <div className="space-y-4">
               {/* Email */}
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full bg-tech-purple/20 flex items-center justify-center mr-4">
@@ -131,19 +134,37 @@ const ContactSection = () => {
               </a>
             </div>
           </motion.div>
-          
+
+          {/* Right Side: Netlify Form */}
           <motion.div
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             variants={fadeInUp}
             transition={{ delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} name="contact" method="POST"
-  data-netlify="true" className="bg-gray-900 p-8 rounded-2xl shadow-lg">
-            <input type="hidden" name="form-name" value="contact" />
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+              className="bg-gray-900 p-8 rounded-2xl shadow-lg"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p className="hidden">
+                <label>
+                  Don’t fill this out if you’re human:{' '}
+                  <input name="bot-field" />
+                </label>
+              </p>
 
               <div className="mb-6">
-                <label htmlFor="name" className="block text-gray-400 font-medium mb-2">Name</label>
+                <label
+                  htmlFor="name"
+                  className="block text-gray-400 font-medium mb-2"
+                >
+                  Name
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -157,7 +178,12 @@ const ContactSection = () => {
               </div>
 
               <div className="mb-6">
-                <label htmlFor="email" className="block text-gray-400 font-medium mb-2">Email</label>
+                <label
+                  htmlFor="email"
+                  className="block text-gray-400 font-medium mb-2"
+                >
+                  Email
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -171,7 +197,12 @@ const ContactSection = () => {
               </div>
 
               <div className="mb-6">
-                <label htmlFor="message" className="block text-gray-400 font-medium mb-2">Message</label>
+                <label
+                  htmlFor="message"
+                  className="block text-gray-400 font-medium mb-2"
+                >
+                  Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -199,4 +230,3 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
-
