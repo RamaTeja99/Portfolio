@@ -37,17 +37,15 @@ const AboutSection = () => {
           variants={fadeIn}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {/* <h3 className="text-2xl font-bold font-display mb-4 text-white text-center md:text-left">
-            B.Tech Computer Science Student with a passion for Cyber Security
-          </h3> */}
-
+        
           <p className="text-gray-400 mb-6">
-            Results-driven B.Tech student in Computer Science Engineering with a strong foundation in Cyber Security and Web Development. 
-            Proven ability in vulnerability assessment, penetration testing, and implementing security best practices.
+            I am Batchu Venkata Dharma Rama Teja, currently pursuing a B.Tech in Computer Science and Engineering. I have a solid foundation in Data Structures and Algorithms, combined with expertise in web development, cloud computing, and cybersecurity concepts such as secure application design and threat analysis. My skill set encompasses backend development, API integration, secure coding practices, and agile project management methodologies.
+
           </p>
 
           <p className="text-gray-400 mb-6">
-            Adept at front-end and back-end development with hands-on experience in developing user-centric applications.
+            Alongside my technical competencies, I have developed strong soft skills including leadership, time management, analytical problem-solving, and effective communication. I actively stay informed on emerging technologies, cybersecurity trends, and industry best practices, preparing myself to contribute effectively to dynamic professional environments and real-world corporate challenges.
+           
           </p>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -71,12 +69,16 @@ const AboutSection = () => {
 
           <div className="text-center md:text-left">
             <a 
-              href="#contact" 
+              href="https://drive.google.com/file/d/1w0GBHhxtCh_DUCEYlSKHjXcGTM8JR7ff/view?usp=sharing" 
               className="py-3 px-6 bg-tech-purple text-white rounded-lg font-medium hover:bg-tech-dark-purple transition-colors inline-flex items-center"
             >
-              Get In Touch
+              Resume
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                <path strokeLinecap="round" strokeLinejoin="round"  strokeWidth="2"
+                 d="M6 2h7l5 5v13a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/>
+  
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                 d="M11 8v8m0 0l-3-3m3 3l3-3"/>
               </svg>
             </a>
           </div>

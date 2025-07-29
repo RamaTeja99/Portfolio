@@ -12,13 +12,15 @@ const SkillsSection = () => {
     { name: 'Python', level: 90 },
     { name: 'Java', level: 85 },
     { name: 'JavaScript', level: 85 },
-    { name: 'React', level: 80 },
-    { name: 'C', level: 75 },
-    { name: 'MySQL', level: 85 },
-    { name: 'MongoDB', level: 80 },
+    { name:'TypeScript', level:85 },
+    { name: 'JSX', level: 80 },
+    { name: 'Bash', level: 75 },
   ];
   
   const databaseSkills = [
+    { name: 'MySQL', level: 85 },
+    { name:'Postgres', level:80 },
+    { name: 'MongoDB', level: 80 },
     { name: 'Spring Boot', level: 85 },
     { name: 'MERN',level:70 },
     { name: 'Django',level:75},
@@ -26,9 +28,12 @@ const SkillsSection = () => {
   
   const coreSkills = [
     'Data Structures and Algorithms',
+    'Web Development',
     'Database Management Systems',
-    'Cloud Security',
-    'Ethical Hacking'
+    'Docker Containerization',
+    'Machine Learning',
+    'Ethical Hacking',
+
   ];
   
   const softSkills = [

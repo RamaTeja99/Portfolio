@@ -13,22 +13,19 @@ const EducationSection = () => {
       degree: 'B.Tech',
       institution: 'Koneru Lakshmaiah Education Foundation',
       period: '08 2022 – 05 2026',
-      location: 'Vijayawada, India',
-      achievement: 'CGPA: 9.62'
+      location: 'Vijayawada, India'
     },
     {
       degree: 'Intermediate',
       institution: 'Narayana Junior College',
       period: '07 2020 – 04 2022',
-      location: 'Vijayawada, India',
-      achievement: 'CGPA: 8.96'
+      location: 'Vijayawada, India'
     },
     {
       degree: 'SSC',
       institution: 'Sri Chaitanya School',
       period: '06 2019 – 03 2020',
-      location: 'Avanigadda, India',
-      achievement: 'CGPA: 9.7'
+      location: 'Avanigadda, India'
     }
   ];
   
@@ -36,17 +33,17 @@ const EducationSection = () => {
     {
       title: 'Red Hat Certified Enterprise Application Developer',
       issuer: 'REDHAT EX183',
-      link: 'https://www.credly.com/badges/466e4748-d2ff-4a45-906a-23edeedc89c2/public_url'
+      link: 'https://www.credly.com/badges/466e4748-d2ff-4a45-906a-23edeedc89c2'
     },
     {
       title: 'AWS Certified Cloud Practitioner',
       issuer: 'AWS CLFC02',
-      link: 'https://www.credly.com/badges/62204d1b-529d-4eb4-b770-dabaa4bf9e28/public_url'
+      link: 'https://www.credly.com/badges/62204d1b-529d-4eb4-b770-dabaa4bf9e28'
     },
     {
-      title: 'Automation Anywhere Certified Essentials RPA Professional',
-      issuer: 'A360',
-      link: 'https://certificates.automationanywhere.com/bc987dcb-40df-4787-8290-c1fa78acfe0d#acc.hr3PIdAq'
+      title: 'ServiceNow Certified System Administrator',
+      issuer: 'Service Now',
+      link: 'https://www.credly.com/badges/c9c95eed-e886-41df-9761-a117f731cb45'
     }
   ];
   
@@ -120,9 +117,7 @@ const EducationSection = () => {
                       </svg>
                       {item.location}
                     </div>
-                    <div className="mt-2 py-2 px-3 bg-tech-purple/20 text-tech-purple rounded-lg inline-block">
-                      {item.achievement}
-                    </div>
+                    
                   </div>
                 </motion.div>
               ))}

@@ -22,12 +22,9 @@ const ContactSection = () => {
       [e.target.name]: e.target.value
     });
   };
-
-  // Optional: prevent page reload & show alert
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert('Thank you! Your message is on its way 🚀');
-    // Submit the form normally so Netlify picks it up
+    alert('Thank you! Your message is on its way');
     e.currentTarget.submit();
   };
 
@@ -66,12 +63,6 @@ const ContactSection = () => {
                 value="2200032668cseh@gmail.com"
                 href="mailto:2200032668cseh@gmail.com"
                 icon="mail"
-              />
-              <ContactItem
-                title="Phone"
-                value="+91 9963400955"
-                href="tel:+919963400955"
-                icon="phone"
               />
               <ContactItem
                 title="Location"
@@ -211,9 +202,6 @@ const ContactItem = ({
         <rect x="2" y="6" width="20" height="16" rx="2" ry="2" />
         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
       </>
-    ),
-    phone: (
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.11.64.27 1.25.48 1.84a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.59.21 1.2.37 1.84.48a2 2 0 0 1 1.72 2z" />
     ),
     'map-pin': (
       <>

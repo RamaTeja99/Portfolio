@@ -28,7 +28,7 @@ const ProjectsSection = () => {
     {
       title: 'E-Survey Web Application',
       description: 'The E-Survey Web Application is a Mern Stack Project and ESurvey is a user-friendly and efficient platform designed to create, distribute, and collect survey responses online.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+      tech: ['MongoDB', 'Express',  'React', 'Node.js'],
       link: 'https://github.com/RamaTeja99/E-Survey-Web-Application',
       deploylink:'https://e-survey-react.netlify.app/',
       image: 'images/e-survey.png' 
