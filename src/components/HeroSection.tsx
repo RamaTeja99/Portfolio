@@ -14,8 +14,8 @@ const HeroSection = () => {
   const [displayText, setDisplayText] = useState("");
   const [phase, setPhase] = useState("typing");
   const typingSpeed = 1000;
-  const erasingSpeed = 9;
-  const pauseDuration = 300;
+  const erasingSpeed = 30;
+  const pauseDuration = 6000;
 
   const text = mainLabels[currentTextIndex];
 
