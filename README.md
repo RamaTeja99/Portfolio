@@ -1,58 +1,43 @@
-# Welcome to your Portfolio project
+# Personal Portfolio – Rama Teja
 
-## Project info
+Welcome to my personal portfolio website! This project is a reflection of who I am as a developer — showcasing my skills, projects, and journey in tech.
 
-**URL**: 
-## How can I edit this code?
+**🔗 Live Demo:**  
+🌐 [https://ramateja.netlify.app](https://ramateja.netlify.app)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## About the Project
 
-Simply visit the [Portfolio Project](https://) 
+This portfolio is designed to give a quick yet impactful overview of my work, technical skills, and personal story as a developer. Whether you're a recruiter, collaborator, or fellow developer, this site provides insights into what I do and what I bring to the table.
 
-**Use your preferred IDE**
+It's fast, responsive, and built with modern frontend tools to ensure a smooth user experience.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Tech Stack
 
-Follow these steps:
+This project was built using cutting-edge technologies for speed and maintainability:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Vite** – Super-fast build tool and development server  
+- **React** – Component-based UI library  
+- **TypeScript** – Strongly typed JavaScript  
+- **Tailwind CSS** – Utility-first CSS framework for responsive design  
+- **shadcn/ui** – Beautiful, accessible, and customizable UI components
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Getting Started – Clone and Run Locally
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+# 1. Clone the repository
+git clone https://github.com/RamaTeja99/Portfolio.git
+
+# 2. Navigate into the project directory
+cd Portfolio
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
