@@ -23,18 +23,12 @@ const ContactSection = () => {
     });
   };
 
- const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const myForm = event.target as HTMLFormElement;
-    const formData = new FormData(myForm);
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData as any).toString()
-    })
-      .then(() => alert('Thank you for your submission!'))
-      .catch(error => alert(error));
+  // Optional: prevent page reload & show alert
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    alert('Thank you! Your message is on its way 🚀');
+    // Submit the form normally so Netlify picks it up
+    e.currentTarget.submit();
   };
 
   const fadeInUp = {
@@ -67,23 +61,18 @@ const ContactSection = () => {
             </p>
 
             <div className="space-y-6">
-              {/* Email */}
               <ContactItem
                 title="Email"
                 value="2200032668cseh@gmail.com"
                 href="mailto:2200032668cseh@gmail.com"
                 icon="mail"
               />
-
-              {/* Phone */}
               <ContactItem
                 title="Phone"
                 value="+91 9963400955"
                 href="tel:+919963400955"
                 icon="phone"
               />
-
-              {/* Location */}
               <ContactItem
                 title="Location"
                 value="Avanigadda, Andhra Pradesh, India"
@@ -91,14 +80,13 @@ const ContactSection = () => {
               />
             </div>
 
-            {/* Social Links */}
             <div className="mt-8 flex space-x-4">
               <SocialIcon href="https://www.linkedin.com/in/batchuvenkatadharmaramateja" icon="linkedin" />
               <SocialIcon href="https://github.com/RamaTeja99" icon="github" />
             </div>
           </motion.div>
 
-          {/* Right: Contact Form */}
+          {/* Right: Netlify Form */}
           <motion.div
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
@@ -109,16 +97,17 @@ const ContactSection = () => {
               name="contact"
               method="POST"
               data-netlify="true"
-              data-netlify-honeypot="bot-field"
+              netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="bg-gray-900 p-8 rounded-2xl shadow-lg"
             >
               <input type="hidden" name="form-name" value="contact" />
               <p className="hidden">
-                <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
               </p>
 
-              {/* Name */}
               <InputField
                 label="Name"
                 id="name"
@@ -129,7 +118,6 @@ const ContactSection = () => {
                 onChange={handleChange}
               />
 
-              {/* Email */}
               <InputField
                 label="Email"
                 id="email"
@@ -140,9 +128,10 @@ const ContactSection = () => {
                 onChange={handleChange}
               />
 
-              {/* Message */}
               <div className="mb-6">
-                <label htmlFor="message" className="block text-gray-400 font-medium mb-2">Message</label>
+                <label htmlFor="message" className="block text-gray-400 font-medium mb-2">
+                  Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -171,7 +160,8 @@ const ContactSection = () => {
 
 export default ContactSection;
 
-// Helper Component: InputField
+/* Helper components */
+
 const InputField = ({
   label,
   id,
@@ -198,13 +188,12 @@ const InputField = ({
       value={value}
       onChange={onChange}
       required
-      className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-black text-gray-300 focus:ring-2 focus:ring-tech-purple focus:border-tech-purple transition-colors"
       placeholder={placeholder}
+      className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-black text-gray-300 focus:ring-2 focus:ring-tech-purple focus:border-tech-purple transition-colors"
     />
   </div>
 );
 
-// Helper Component: ContactItem
 const ContactItem = ({
   title,
   value,
@@ -217,13 +206,13 @@ const ContactItem = ({
   icon: 'mail' | 'phone' | 'map-pin';
 }) => {
   const icons: Record<string, JSX.Element> = {
-    'mail': (
-       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-tech-purple">
-       <rect x="2" y="6" width="20" height="16" rx="2" ry="2"></rect>
-      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-      </svg>
+    mail: (
+      <>
+        <rect x="2" y="6" width="20" height="16" rx="2" ry="2" />
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+      </>
     ),
-    'phone': (
+    phone: (
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.11.64.27 1.25.48 1.84a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.59.21 1.2.37 1.84.48a2 2 0 0 1 1.72 2z" />
     ),
     'map-pin': (
@@ -246,8 +235,8 @@ const ContactItem = ({
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-tech-purple"
           viewBox="0 0 24 24"
+          className="text-tech-purple"
         >
           {icons[icon]}
         </svg>
@@ -264,8 +253,13 @@ const ContactItem = ({
   );
 };
 
-// Helper Component: SocialIcon
-const SocialIcon = ({ href, icon }: { href: string; icon: 'linkedin' | 'github' }) => {
+const SocialIcon = ({
+  href,
+  icon
+}: {
+  href: string;
+  icon: 'linkedin' | 'github';
+}) => {
   const paths: Record<string, JSX.Element> = {
     linkedin: (
       <>
