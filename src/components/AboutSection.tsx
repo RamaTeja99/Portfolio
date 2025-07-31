@@ -58,10 +58,6 @@ const AboutSection = () => {
               <p className="text-gray-400">2200032668cseh@gmail.com</p>
             </div>
             <div>
-              <h4 className="font-bold text-white mb-2">Phone</h4>
-              <p className="text-gray-400">+91 9963400955</p>
-            </div>
-            <div>
               <h4 className="font-bold text-white mb-2">Degree</h4>
               <p className="text-gray-400">B.Tech in CSE</p>
             </div>
