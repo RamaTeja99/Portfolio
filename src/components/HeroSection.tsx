@@ -5,7 +5,7 @@ const mainLabels = [
   "Rama Teja",
   "Software Developer",
   "Full Stack Developer",
-  "Cybersecurity Enthusiast"
+  "Cybersecurity Enthusiast",
 ];
 const labelPool = mainLabels.slice(1);
 
@@ -13,9 +13,9 @@ const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [phase, setPhase] = useState("typing");
-  const typingSpeed = 1000;
+  const typingSpeed = 500;
   const erasingSpeed = 30;
-  const pauseDuration = 6000;
+  const pauseDuration = 3000;
 
   const text = mainLabels[currentTextIndex];
 
@@ -38,7 +38,7 @@ const HeroSection = () => {
         }, erasingSpeed);
       } else {
         setPhase("typing");
-        setCurrentTextIndex(prev => (prev + 1) % mainLabels.length);
+        setCurrentTextIndex((prev) => (prev + 1) % mainLabels.length);
       }
     }
     return () => clearTimeout(timeout);
@@ -53,16 +53,21 @@ const HeroSection = () => {
     badges = labelPool;
   } else {
     const start = (currentLabelIndex + 1) % labelPool.length;
-    badges = [
-      labelPool[start],
-      labelPool[(start + 1) % labelPool.length]
-    ];
+    badges = [labelPool[start], labelPool[(start + 1) % labelPool.length]];
   }
 
   const labelVariants = {
     initial: { opacity: 0, y: 12 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.4, 0.12, 0.34, 1] } },
-    exit: { opacity: 0, y: -8, transition: { duration: 0.35, ease: [0.65, 0, 0.18, 1] } },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.55, ease: [0.4, 0.12, 0.34, 1] },
+    },
+    exit: {
+      opacity: 0,
+      y: -8,
+      transition: { duration: 0.35, ease: [0.65, 0, 0.18, 1] },
+    },
   };
 
   return (
@@ -125,13 +130,13 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            Results-driven B.Tech student in Computer Science Engineering with strong expertise in
-            DSA,
+            Results-driven B.Tech student in Computer Science Engineering with
+            strong expertise in DSA,
             <br />
             Web Development and Cybersecurity principles.
             <br />
-            Skilled in Backend Development, API Integration, Secure Application Design, and Agile Project
-            Management.
+            Skilled in Backend Development, API Integration, Secure Application
+            Design, and Agile Project Management.
           </motion.p>
           <motion.div
             className="flex flex-wrap gap-3"
